@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
+name       : libfprint-tod
+version    : '1.94.10'
+release    : 1
+source     :
+    - https://gitlab.freedesktop.org/3v1n0/libfprint/-/archive/v1.94.10+tod1/libfprint-v1.94.10+tod1.tar.bz2 : 0b5504a2b6da8c851e4cc67d2c96b60e08e197e8530cdac5ddebbe0929ad74a9
+homepage   : https://fprint.freedesktop.org/
+license    : LGPL-2.1-or-later
+component  : desktop.library
+summary    : Library for fingerprint readers - TOD version
+description: |
+    libfprint is an open source software library designed to make it easy for application developers to add support for consumer fingerprint readers to their software.
+replaces   : libfprint
+builddeps  :
+    - pkgconfig(cairo)
+    - pkgconfig(gtk-doc)
+    - pkgconfig(gudev-1.0) 
+    - pkgconfig(gusb)
+    - pkgconfig(libcrypto)
+    - pkgconfig(pixman-1)
+    - python-cairo
+    - python-gobject
+    - umockdev
+setup      : |
+    %meson_configure -Ddrivers=all -Dinstalled-tests=false
+build      : |
+    %ninja_build
+install    : |
+    %ninja_install

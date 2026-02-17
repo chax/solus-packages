@@ -1,0 +1,131 @@
+<PISI>
+    <Source>
+        <Name>libfprint-tod</Name>
+        <Homepage>https://fprint.freedesktop.org/</Homepage>
+        <Packager>
+            <Name>Mislav &#x10c;akari&#x107;</Name>
+            <Email>mcakaric@gmail.com</Email>
+        </Packager>
+        <License>LGPL-2.1-or-later</License>
+        <PartOf>desktop.library</PartOf>
+        <Summary xml:lang="en">Library for fingerprint readers - TOD version</Summary>
+        <Description xml:lang="en">libfprint is an open source software library designed to make it easy for application developers to add support for consumer fingerprint readers to their software.
+</Description>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://sources.getsol.us/README.Solus</Archive>
+    </Source>
+    <Package>
+        <Name>libfprint-tod</Name>
+        <Summary xml:lang="en">Library for fingerprint readers - TOD version</Summary>
+        <Description xml:lang="en">libfprint is an open source software library designed to make it easy for application developers to add support for consumer fingerprint readers to their software.
+</Description>
+        <PartOf>desktop.library</PartOf>
+        <Files>
+            <Path fileType="library">/usr/lib/udev/rules.d/70-libfprint-2.rules</Path>
+            <Path fileType="library">/usr/lib64/girepository-1.0/FPrint-2.0.typelib</Path>
+            <Path fileType="library">/usr/lib64/libfprint-2-tod.so.1</Path>
+            <Path fileType="library">/usr/lib64/libfprint-2.so.2</Path>
+            <Path fileType="library">/usr/lib64/libfprint-2.so.2.0.0</Path>
+            <Path fileType="data">/usr/share/metainfo/org.freedesktop.libfprint.metainfo.xml</Path>
+        </Files>
+        <Replaces>
+            <Package>libfprint</Package>
+        </Replaces>
+    </Package>
+    <Package>
+        <Name>libfprint-tod-devel</Name>
+        <Summary xml:lang="en">Development files for libfprint-tod</Summary>
+        <Description xml:lang="en">libfprint is an open source software library designed to make it easy for application developers to add support for consumer fingerprint readers to their software.
+</Description>
+        <PartOf>programming.devel</PartOf>
+        <RuntimeDependencies>
+            <Dependency release="1">libfprint-tod</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include/libfprint-2/fp-context.h</Path>
+            <Path fileType="header">/usr/include/libfprint-2/fp-device.h</Path>
+            <Path fileType="header">/usr/include/libfprint-2/fp-enums.h</Path>
+            <Path fileType="header">/usr/include/libfprint-2/fp-image-device.h</Path>
+            <Path fileType="header">/usr/include/libfprint-2/fp-image.h</Path>
+            <Path fileType="header">/usr/include/libfprint-2/fp-print.h</Path>
+            <Path fileType="header">/usr/include/libfprint-2/fprint.h</Path>
+            <Path fileType="header">/usr/include/libfprint-2/tod-1/drivers_api.h</Path>
+            <Path fileType="header">/usr/include/libfprint-2/tod-1/fpi-assembling.h</Path>
+            <Path fileType="header">/usr/include/libfprint-2/tod-1/fpi-byte-reader.h</Path>
+            <Path fileType="header">/usr/include/libfprint-2/tod-1/fpi-byte-utils.h</Path>
+            <Path fileType="header">/usr/include/libfprint-2/tod-1/fpi-byte-writer.h</Path>
+            <Path fileType="header">/usr/include/libfprint-2/tod-1/fpi-compat.h</Path>
+            <Path fileType="header">/usr/include/libfprint-2/tod-1/fpi-context.h</Path>
+            <Path fileType="header">/usr/include/libfprint-2/tod-1/fpi-device.h</Path>
+            <Path fileType="header">/usr/include/libfprint-2/tod-1/fpi-enums.h</Path>
+            <Path fileType="header">/usr/include/libfprint-2/tod-1/fpi-image-device.h</Path>
+            <Path fileType="header">/usr/include/libfprint-2/tod-1/fpi-image.h</Path>
+            <Path fileType="header">/usr/include/libfprint-2/tod-1/fpi-log.h</Path>
+            <Path fileType="header">/usr/include/libfprint-2/tod-1/fpi-minutiae.h</Path>
+            <Path fileType="header">/usr/include/libfprint-2/tod-1/fpi-print.h</Path>
+            <Path fileType="header">/usr/include/libfprint-2/tod-1/fpi-spi-transfer.h</Path>
+            <Path fileType="header">/usr/include/libfprint-2/tod-1/fpi-ssm.h</Path>
+            <Path fileType="header">/usr/include/libfprint-2/tod-1/fpi-usb-transfer.h</Path>
+            <Path fileType="header">/usr/include/libfprint-2/tod-1/tod/tod-macros.h</Path>
+            <Path fileType="library">/usr/lib64/libfprint-2-tod.so</Path>
+            <Path fileType="library">/usr/lib64/libfprint-2.so</Path>
+            <Path fileType="data">/usr/lib64/pkgconfig/libfprint-2-tod-1.pc</Path>
+            <Path fileType="data">/usr/lib64/pkgconfig/libfprint-2.pc</Path>
+            <Path fileType="data">/usr/share/gir-1.0/FPrint-2.0.gir</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>libfprint-tod-docs</Name>
+        <Summary xml:lang="en">Documentation for libfprint-tod</Summary>
+        <Description xml:lang="en">libfprint is an open source software library designed to make it easy for application developers to add support for consumer fingerprint readers to their software.
+</Description>
+        <PartOf>programming.docs</PartOf>
+        <Files>
+            <Path fileType="doc">/usr/share/gtk-doc/html/libfprint-2/FpContext.html</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/libfprint-2/FpDevice.html</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/libfprint-2/FpImage.html</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/libfprint-2/FpImageDevice.html</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/libfprint-2/FpPrint.html</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/libfprint-2/advanced-topics.html</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/libfprint-2/api-index.html</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/libfprint-2/driver-dev.html</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/libfprint-2/driver-helpers.html</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/libfprint-2/driver-img.html</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/libfprint-2/driver-misc.html</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/libfprint-2/driver-print.html</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/libfprint-2/getting-started.html</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/libfprint-2/home.png</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/libfprint-2/index.html</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/libfprint-2/intro.html</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/libfprint-2/left-insensitive.png</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/libfprint-2/left.png</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/libfprint-2/libfprint-2-Image-frame-assembly.html</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/libfprint-2/libfprint-2-Internal-FpDevice.html</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/libfprint-2/libfprint-2-Internal-FpImage.html</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/libfprint-2/libfprint-2-Internal-FpImageDevice.html</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/libfprint-2/libfprint-2-Internal-FpPrint.html</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/libfprint-2/libfprint-2-Logging.html</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/libfprint-2/libfprint-2-SPI-transfer-helpers.html</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/libfprint-2/libfprint-2-Sequential-state-machine.html</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/libfprint-2/libfprint-2-USB-transfer-helpers.html</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/libfprint-2/libfprint-2-fpi-context.html</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/libfprint-2/libfprint-2.devhelp2</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/libfprint-2/pt01.html</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/libfprint-2/pt02.html</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/libfprint-2/pt03.html</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/libfprint-2/right-insensitive.png</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/libfprint-2/right.png</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/libfprint-2/style.css</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/libfprint-2/up-insensitive.png</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/libfprint-2/up.png</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2026-02-16</Date>
+            <Version>1.94.10</Version>
+            <Comment>Packaging update</Comment>
+            <Name>Mislav &#x10c;akari&#x107;</Name>
+            <Email>mcakaric@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>
